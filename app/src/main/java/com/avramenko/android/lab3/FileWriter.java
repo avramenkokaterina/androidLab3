@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class FileWriter {
-    private final static String FILE_NAME = "file.txt";
+    private final static String FILE_NAME = "text.txt";
 
 
     public void saveText(View view, String str){

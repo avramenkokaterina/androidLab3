@@ -8,7 +8,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class FileReader {
-    private final static String FILE_NAME = "file.txt";
+    private final static String FILE_NAME = "text.txt";
 
     public String openText(View view) {
         FileInputStream fin = null;
@@ -20,14 +20,14 @@ public class FileReader {
             String text = new String(bytes);
             return text;
         } catch (IOException ex) {
-            Toast.makeText(view.getContext(), ex.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), "File is empty.", Toast.LENGTH_SHORT).show();
             return "";
         } finally {
             try {
                 if (fin != null)
                     fin.close();
             } catch (IOException ex) {
-                Toast.makeText(view.getContext(), ex.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(view.getContext(), "File is empty.", Toast.LENGTH_SHORT).show();
             }
         }
     }
