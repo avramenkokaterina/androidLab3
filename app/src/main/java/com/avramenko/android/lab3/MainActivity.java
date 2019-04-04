@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         String str = fileReader.openText(view);
         if (str.equals("")){
             Toast toast = Toast.makeText(view.getContext(), "File is empty.", Toast.LENGTH_LONG);
+            toast.show();
         }
         else {
             Intent intent = new Intent(this, FileContentActivity.class);
